@@ -4,7 +4,9 @@
             Подборки фильмов и сериалов
         </h4>
         <div class="content-sidebar__info__wrapper">
-            <app-info></app-info>
+            @for(item of info; track item.id) {
+            <app-info [item]="item"></app-info>
+            }
         </div>
     </div>
     <div class="content-sidebar__footer">

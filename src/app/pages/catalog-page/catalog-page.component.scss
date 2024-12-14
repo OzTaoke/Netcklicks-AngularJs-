@@ -1,0 +1,18 @@
+.content-main {
+    flex-grow: 1;
+
+    &__title {
+        margin-bottom: 25px;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+    }
+}
+
+.content-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}

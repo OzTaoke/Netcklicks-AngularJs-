@@ -1,8 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface TytleInterface {
-
-}
+import { Film } from '../../models/film.model';
 
 @Component({
   selector: 'app-card',
@@ -12,5 +9,5 @@ interface TytleInterface {
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  @Input() title: string = 'Марсианин 1';
+  @Input() film!: Film;
 }

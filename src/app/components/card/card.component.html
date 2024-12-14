@@ -1,15 +1,17 @@
-<!-- <a href="{{item.link}}" class="content-cards__item">
+<a [routerLink]="['/film', film.id]" class="content-cards__item">
     <div class="content-cards__item--img">
-        <img src="{{item.image}}" alt="film">
+        <img [src]="film.image" [alt]="film.original">
     </div>
     <div class="content-cards__item--title">
-        <h5>{{item.title}}</h5>
-        <p>{{item.original}}</p>
+        <h5>{{film.title}}</h5>
+        <p>{{film.original}}</p>
     </div>
     <p class="content-cards__item--description">
-        {{item.genre}}
+        @for(genre of film.genre;track genre) {
+        <span>{{genre}} </span>
+        }
     </p>
     <p class="content-cards__item--raiting">
-        {{item.raiting}}
+        {{film.raiting}}
     </p>
-</a> -->
+</a>

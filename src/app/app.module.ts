@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { InfoComponent } from './components/info/info.component';
+import { CatalogPageComponent } from './pages/catalog-page/catalog-page.component';
+import { FilmPageComponent } from './pages/film-page/film-page.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { InfoComponent } from './components/info/info.component';
     HeaderComponent,
     SearchComponent,
     SidebarComponent,
-    InfoComponent
+    InfoComponent,
+    CatalogPageComponent,
+    FilmPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

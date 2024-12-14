@@ -1,14 +1,10 @@
-.content-cards__item {
+:host {
     width: calc((100% - 60px) / 3);
+}
+
+.content-cards__item {
+    width: 100%;
     text-decoration: none;
-
-    @media (max-width:480px) {
-        min-width: 100%;
-    }
-
-    @media (max-width:991px) {
-        width: calc((100% - 30px) / 2);
-    }
 
     &--img,
     &--title {
@@ -39,7 +35,7 @@
             font-weight: 400;
         }
 
-        h1,
+        h5,
         p {
             color: #000;
             font-size: 16px;
@@ -53,6 +49,13 @@
         font-weight: 400;
         line-height: 19px;
         margin-bottom: 11px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        span:not(:last-child)::after {
+            content: ',';
+        }
     }
 
     &--raiting {
@@ -60,5 +63,18 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 19px;
+    }
+}
+
+@media (max-width:480px) {
+    :host {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:991px) {
+    :host {
+        width: calc((100% - 30px) / 2);
     }
 }
